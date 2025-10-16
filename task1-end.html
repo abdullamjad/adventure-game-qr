@@ -293,11 +293,12 @@
             message.style.display = 'none';
 
             try {
-                const response = await fetch('https://adventure-game-proxy.vercel.app/api/proxy?action=end&teamId=' + encodeURIComponent(teamId), {
+                const response = await fetch('https://abd15.app.n8n.cloud/webhook/task1-end', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
+                    body: JSON.stringify({ teamId: teamId })
                 });
 
                 const data = await response.json();
